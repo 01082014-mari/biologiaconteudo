@@ -1,0 +1,28 @@
+{
+  "name": "BioLab",
+  "short_name": "BioLab",
+  "description": "BioLab — Explore, aprenda e evolua na Biologia. Trilhas, aulas, exercícios, simulados, flashcards e laboratórios virtuais.",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F0FDF4",
+  "theme_color": "#166534",
+  "categories": ["education", "science"],
+  "icons": [
+    {
+      "src": "foto192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "foto512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

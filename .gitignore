@@ -5,5 +5,3 @@ coverage/
 .vscode/
 .idea/
 
-# Esqueleto React/TypeScript em desenvolvimento — não faz parte da PWA publicada
-biolab/

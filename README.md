@@ -138,7 +138,8 @@ O material é autoral, foi redigido para o estudante e passa por um verificador 
 ├── illustrations/             # ilustrações das trilhas (SVG)
 ├── scripts/                   # servidor, validações e geradores
 ├── tests/                     # suíte de testes
-└── package.json             # scripts do projeto
+├── biolab/                    # versão React/TypeScript (em desenvolvimento)
+└── package.json               # scripts do projeto
 ```
 
 ---
@@ -216,6 +217,7 @@ Todo o progresso fica salvo **apenas no navegador** deste dispositivo, em `local
 - As ilustrações das trilhas e os ícones da aplicação são **SVG autorais**, gerados pelos scripts em `scripts/`.
 - O modelo de fotossíntese do laboratório é **educacional e simplificado**, identificado como tal na própria interface.
 - A plataforma é **100% estática**: não há etapa de build nem dependência de produção. O que está no repositório é exatamente o que é publicado.
+- A pasta `biolab/` guarda a **versão React + TypeScript** da plataforma, em desenvolvimento. Ela **não é publicada** — veja `biolab/README.md`.
 
 ## 📄 Licença
 
