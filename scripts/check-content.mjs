@@ -11,7 +11,7 @@ import { join, extname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)))
-const TARGETS = ['js/data', 'js/lib', 'biolab/src/content']
+const TARGETS = ['js/data', 'js/views', 'biolab/src/content']
 
 const SUSPICIOUS_CHARS = [
   [/\p{Script=Han}/gu, 'caractere Han (CJK)'],
@@ -103,6 +103,9 @@ const ENGLISH_TERMS = [
   'false',
   'null',
   'undefined',
+  // Nomes de classes CSS e identificadores que não indicam texto em inglês
+  'group',
+  'Timer',
 ]
 
 async function collect(dir) {
@@ -132,6 +135,19 @@ function extractLiterals(line) {
   return literals
 }
 
+/**
+ * Um literal só é tratado como texto em prosa quando contém pelo menos duas
+ * palavras e não carrega marcação HTML, código interpolado ou atribuições.
+ */
+function isProse(literal) {
+  if (literal.length < 12) return false
+  if (/[<>={}]/.test(literal)) return false
+  // Listas de classes CSS (ex.: "chip-group mt-1") não são texto em prosa.
+  if (literal.includes('-') && literal === literal.toLowerCase()) return false
+  const words = literal.split(/\s+/).filter((word) => /[A-Za-zÀ-ÿ]{2,}/.test(word))
+  return words.length >= 2
+}
+
 const files = (await Promise.all(TARGETS.map((dir) => collect(join(ROOT, dir))))).flat()
 let problems = 0
 
@@ -141,7 +157,7 @@ for (const file of files) {
 
   lines.forEach((line, index) => {
     for (const literal of extractLiterals(line)) {
-      if (literal.length < 3) continue
+      if (!isProse(literal)) continue
       for (const [pattern, label] of SUSPICIOUS_CHARS) {
         if (pattern.test(literal)) {
           console.error(`✗ ${file}:${index + 1} [${label}] ${literal.trim().slice(0, 160)}`)

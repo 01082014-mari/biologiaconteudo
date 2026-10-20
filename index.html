@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>BioLab — Explore, aprenda e evolua na Biologia</title>
+    <meta
+      name="description"
+      content="BioLab é uma plataforma didática de reforço de Biologia Básica: trilhas, aulas completas, exercícios corrigidos, simulados cronometrados, flashcards com revisão espaçada e laboratórios virtuais. Funciona offline e pode ser instalada como aplicativo."
+    />
+    <meta name="theme-color" content="#166534" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="BioLab" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+
+    <div id="app" class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="Navegação principal">
+        <a class="brand" href="#/dashboard">
+          <span class="brand__mark" id="brand-mark"></span>
+          <span>
+            <span class="brand__name">BioLab</span>
+            <span class="brand__slogan">Explore, aprenda e evolua</span>
+          </span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Seções da plataforma"></nav>
+
+        <div class="sidebar__footer">
+          <div class="level-card" id="level-card"></div>
+        </div>
+      </aside>
+
+      <div class="main">
+        <header class="topbar">
+          <button
+            class="btn btn--ghost btn--sm menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Abrir menu de navegação"
+            aria-expanded="false"
+            aria-controls="sidebar"
+          ></button>
+          <span class="topbar__title" id="topbar-title">BioLab</span>
+          <span class="topbar__spacer"></span>
+          <div class="row" id="topbar-actions"></div>
+        </header>
+
+        <main class="content" id="conteudo" tabindex="-1"></main>
+      </div>
+    </div>
+
+    <div class="scrim" id="scrim" hidden></div>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação rápida"></nav>
+
+    <noscript>
+      <div style="padding: 2rem; text-align: center">
+        <h1>BioLab</h1>
+        <p>Esta plataforma precisa de JavaScript habilitado para funcionar.</p>
+      </div>
+    </noscript>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

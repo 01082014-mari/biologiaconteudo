@@ -7,10 +7,10 @@
  *  - `errei`  → reinicia o ciclo, intervalo de 10 minutos;
  *  - `dificil` → intervalo reduzido pela metade, com fator menor;
  *  - `bom`    → intervalo multiplicado pelo fator atual;
- *  - `fácil`   → intervalo multiplicado pelo fator, com fator maior.
+ *  - `facil`   → intervalo multiplicado pelo fator, com fator maior.
  */
 
-export const RATINGS = ['errei', 'dificil', 'bom', 'fácil']
+export const RATINGS = ['errei', 'dificil', 'bom', 'facil']
 
 export const RATING_LABELS = {
   errei: 'Errei',
@@ -47,7 +47,7 @@ export function createSchedule(flashcardId) {
  * Calcula o novo estado do cartão a partir da avaliação.
  *
  * @param {object} schedule estado anterior
- * @param {string} rating uma de `errei`, `dificil`, `bom`, `fácil`
+ * @param {string} rating uma de `errei`, `dificil`, `bom`, `facil`
  * @param {number} now timestamp de referência (epoch ms)
  */
 export function scheduleCard(schedule, rating, now = Date.now()) {
@@ -73,7 +73,8 @@ export function scheduleCard(schedule, rating, now = Date.now()) {
     case 'dificil':
       repetitions += 1
       ease = Math.max(1.3, ease - 0.15)
-      intervalDays = Math.max(1, Math.round((intervalDays || 1) * 1.2))
+      // O cartão foi difícil: a revisão deve voltar antes.
+      intervalDays = Math.max(1, Math.round((intervalDays || 2) * 0.6))
       return {
         ...current,
         ease,
@@ -98,7 +99,7 @@ export function scheduleCard(schedule, rating, now = Date.now()) {
         lastReviewedAt: now,
         state: repetitions >= 4 ? 'dominada' : 'revisando',
       }
-    case 'fácil':
+    case 'facil':
       repetitions += 1
       ease = Math.min(3.2, ease + 0.15)
       intervalDays = repetitions === 1 ? 2 : Math.max(2, Math.round((intervalDays || 2) * ease * 1.25))

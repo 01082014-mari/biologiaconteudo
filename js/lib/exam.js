@@ -65,7 +65,6 @@ export function buildExam({ topicIds = [], quantity = 10, difficulty = 'mista', 
 function seededRandom(seed) {
   if (!seed) return Math.random
   // `sample` usa a mesma função aleatória; com seed, os resultados são estáveis.
-  // eslint-disable-next-line no-undef
   return seededRandomImpl(seed)
 }
 

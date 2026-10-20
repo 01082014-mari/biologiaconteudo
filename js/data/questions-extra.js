@@ -28,7 +28,7 @@ export const EXTRA_QUESTIONS = [
     topic: 'evolucao',
     type: 'multipla-escolha',
     difficulty: 'medio',
-      'O crossing-over ocorre em qual subfase da meiose?',
+    prompt: 'O crossing-over ocorre em qual subfase da meiose?',
     options: [
       { id: 'a', text: 'Prófase I' },
       { id: 'b', text: 'Metáfase II' },
@@ -251,7 +251,7 @@ export const EXTRA_QUESTIONS = [
     topic: 'zoologia',
     type: 'multipla-escolha',
     difficulty: 'facil',
-      'Os equinodermos são caracterizados pela:',
+    prompt: 'Os equinodermos são caracterizados pela:',
     options: [
       { id: 'a', text: 'Simetria bilateral e bilateralidade do corpo' },
       { id: 'b', text: 'Simetria radial' },
@@ -270,6 +270,7 @@ export const EXTRA_QUESTIONS = [
     topic: 'zoologia',
     type: 'multipla-escolha',
     difficulty: 'medio',
+    prompt:
       'A principal característica que permite aos mamíferos manter atividade metabólica elevada em distintos ambientes é a:',
     options: [
       { id: 'a', text: 'Presença de brânquias internas' },

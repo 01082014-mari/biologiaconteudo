@@ -1,42 +1,9 @@
-# Dependências
 node_modules/
-.pnp
-.pnp.js
-
-# Builds
-dist/
-dist-ssr/
-build/
-dev-dist/
-*.local
-
-# Cache / gerados
-.vite/
-.cache/
-coverage/
-*.tsbuildinfo
-
-# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-# Variáveis de ambiente
-.env
-.env.*
-!.env.example
-
-# Sistema operacional
 .DS_Store
-Thumbs.db
-desktop.ini
-
-# Editores
-.vscode/*
-!.vscode/extensions.json
+*.log
+coverage/
+.vscode/
 .idea/
-*.swp
+
+# Esqueleto React/TypeScript em desenvolvimento — não faz parte da PWA publicada
+biolab/

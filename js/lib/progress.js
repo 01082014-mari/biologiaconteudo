@@ -184,7 +184,6 @@ export function buildRecommendations(snapshot, state) {
   const strongTopics = (snapshot.topicStats ?? []).filter((stat) => stat.total >= 5 && stat.percent >= 85)
   if (strongTopics.length > 0) {
     const topic = strongTopics[0]
-    const lesson = ALL_LESSONS.find((item) => item.topicId === topic.topic)
     recommendations.push({
       type: 'avanco',
       title: 'Você já domina este tema',

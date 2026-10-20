@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BioLab — Sem conexão</title>
+    <meta name="theme-color" content="#166534" />
+    <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/base.css" />
+    <style>
+      body {
+        display: grid;
+        place-items: center;
+        min-height: 100dvh;
+        padding: 1.5rem;
+      }
+      .offline {
+        text-align: center;
+        max-width: 30rem;
+      }
+      .offline__mark {
+        margin: 0 auto 1.25rem;
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 1.25rem;
+        background: linear-gradient(135deg, #166534, #22c55e);
+        display: grid;
+        place-items: center;
+        box-shadow: 0 10px 30px rgba(22, 101, 52, 0.25);
+      }
+      .offline h1 {
+        margin-bottom: 0.5rem;
+      }
+      .offline p {
+        color: #52637a;
+        margin-bottom: 1.5rem;
+      }
+      .offline .btn {
+        display: inline-flex;
+        padding: 0.6rem 1.05rem;
+        border-radius: 0.85rem;
+        background: #166534;
+        color: #fff;
+        font-weight: 650;
+        text-decoration: none;
+      }
+      @media (prefers-color-scheme: dark) {
+        .offline p {
+          color: #a3b3c7;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="offline">
+      <div class="offline__mark">
+        <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="9" />
+          <path d="m8.5 15.5 7-7" />
+        </svg>
+      </div>
+      <h1>Você está sem conexão</h1>
+      <p>
+        Não foi possível carregar o BioLab agora. Se você já usou a plataforma antes, volte para a
+        página inicial — o conteúdo continua disponível offline.
+      </p>
+      <a class="btn" href="./">Tentar novamente</a>
+    </main>
+  </body>
+</html>

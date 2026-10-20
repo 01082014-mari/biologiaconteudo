@@ -1,0 +1,38 @@
+{
+  "name": "biolab-pwa",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "BioLab — Explore, aprenda e evolua na Biologia. Plataforma didática de reforço de Biologia Básica em HTML, CSS e JavaScript, instalável e disponível offline.",
+  "keywords": [
+    "biologia",
+    "educacao",
+    "pwa",
+    "simulado",
+    "exercicios",
+    "flashcards"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "test": "node --test \"tests/**/*.test.js\"",
+    "test:smoke": "node scripts/smoke.mjs",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "check:content": "node scripts/check-content.mjs",
+    "check:data": "node scripts/check-data.mjs",
+    "icons": "node scripts/generate-icons.mjs",
+    "illustrations": "node scripts/generate-illustrations.mjs",
+    "validate": "npm run check:content && npm run check:data && npm run check:render && npm run lint && npm test && npm run test:smoke",
+    "check:render": "node scripts/check-render.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.5",
+    "globals": "^16.5.0",
+    "@eslint/js": "^9.39.5"
+  }
+}

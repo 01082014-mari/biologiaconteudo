@@ -157,7 +157,7 @@ export const GENETICS_QUESTIONS = [
     topic: 'genetica',
     type: 'verdadeiro-falso',
     difficulty: 'medio',
-    prompt: 'Em um cruzamento teste (testcross), o individual's fenótipo dominante é avaliado com um heterozigoto de fenótipo recessivo.',
+    prompt: 'Em um cruzamento teste (testcross), o fenótipo dominante do indivíduo é avaliado com um heterozigoto de fenótipo recessivo.',
     options: [
       { id: 'v', text: 'Verdadeiro' },
       { id: 'f', text: 'Falso' },
