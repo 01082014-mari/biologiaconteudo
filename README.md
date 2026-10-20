@@ -8,6 +8,10 @@ O BioLab reúne, em um só lugar: trilhas de conteúdo, **14 aulas completas**, 
 
 Feito com **HTML, CSS e JavaScript** puros — sem framework, sem build obrigatório, sem CDN em tempo de execução.
 
+> 🎨 **Identidade visual:** azul (cor principal) e amarelo (cor de destaque), nas cores da
+> **Escola Estadual Professor Abel Freire Coelho**, cuja marca aparece no cabeçalho da
+> plataforma. O rodapé credita a autoria: **Isa Mariany Silva dos Santos, 3 ano info**.
+
 ---
 
 ## 📸 O que existe na plataforma
@@ -92,7 +96,7 @@ O material é autoral, foi redigido para o estudante e passa por um verificador 
 ## 📱 PWA
 
 - **Web App Manifest** com nome, cores, ícones, atalhos e modo `standalone`.
-- **Ícones** de 192×192, 512×512, `maskable` de 512×512 e `apple-touch-icon`, gerados a partir do logotipo SVG.
+- **Ícones** de 192×192, 512×512, `maskable` de 512×512 e `apple-touch-icon`, gerados a partir do logotipo SVG por um rasterizador próprio (`npm run icons`), sem dependências externas.
 - **Service worker** com pré-cache dos recursos essenciais, *fallback* de navegação para o `index.html` e cache em tempo de execução — a plataforma abre **offline** após a primeira visita.
 - Aviso de **nova versão** disponível quando o service worker é atualizado.
 - Botão **Instalar** (via `beforeinstallprompt`) nas laterais compatíveis.
@@ -136,6 +140,7 @@ O material é autoral, foi redigido para o estudante e passa por um verificador 
 │   └── views/                 # uma tela por seção
 ├── icons/                     # ícones da PWA (PNG + SVG)
 ├── illustrations/             # ilustrações das trilhas (SVG)
+├── images/                    # imagens da interface (marca da escola)
 ├── scripts/                   # servidor, validações e geradores
 ├── tests/                     # suíte de testes
 ├── biolab/                    # versão React/TypeScript (em desenvolvimento)
@@ -215,6 +220,7 @@ Todo o progresso fica salvo **apenas no navegador** deste dispositivo, em `local
 ## 📝 Notas
 
 - As ilustrações das trilhas e os ícones da aplicação são **SVG autorais**, gerados pelos scripts em `scripts/`.
+- A **marca da escola** (`images/abelcoelho.jpeg`) aparece no cabeçalho e o **rodapé** credita a autoria do trabalho.
 - O modelo de fotossíntese do laboratório é **educacional e simplificado**, identificado como tal na própria interface.
 - A plataforma é **100% estática**: não há etapa de build nem dependência de produção. O que está no repositório é exatamente o que é publicado.
 - A pasta `biolab/` guarda a **versão React + TypeScript** da plataforma, em desenvolvimento. Ela **não é publicada** — veja `biolab/README.md`.

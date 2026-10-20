@@ -17,7 +17,7 @@
  * subpasta (por exemplo, `github.io/biologiaconteudo/`).
  */
 
-const VERSION = 'v1.0.0'
+const VERSION = 'v1.1.0'
 const STATIC_CACHE = `biolab-static-${VERSION}`
 const PAGE_CACHE = `biolab-pages-${VERSION}`
 const FONT_CACHE = `biolab-fonts-${VERSION}`
@@ -68,6 +68,7 @@ const PRECACHE_URLS = [
   './icons/icon-512.png',
   './icons/icon-maskable-512.png',
   './icons/apple-touch-icon.png',
+  './images/abelcoelho.jpeg',
   './illustrations/citologia.svg',
   './illustrations/genetica.svg',
   './illustrations/ecologia.svg',

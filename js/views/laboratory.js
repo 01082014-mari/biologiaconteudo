@@ -223,26 +223,26 @@ function cellStage() {
         aria-label="Ilustração interativa de uma célula animal">
         <defs>
           <radialGradient id="cyto" cx="50%" cy="45%" r="60%">
-            <stop offset="0%" stop-color="#f0fdf4"/><stop offset="100%" stop-color="#bbf7d0"/>
+            <stop offset="0%" stop-color="#eff6ff"/><stop offset="100%" stop-color="#dbeafe"/>
           </radialGradient>
         </defs>
-        <ellipse cx="260" cy="190" rx="200" ry="150" fill="url(#cyto)" stroke="#166534" stroke-width="4"/>
+        <ellipse cx="260" cy="190" rx="200" ry="150" fill="url(#cyto)" stroke="#1d4ed8" stroke-width="4"/>
 
         <g class="lab-organelle" data-organelle="nucleo" tabindex="0" role="button" aria-label="Núcleo">
-          <ellipse cx="228" cy="168" rx="56" ry="48" fill="#a7f3d0" stroke="#166534" stroke-width="3"/>
-          <circle cx="214" cy="158" r="16" fill="#166534"/>
-          <circle cx="242" cy="182" r="8" fill="#166534"/>
+          <ellipse cx="228" cy="168" rx="56" ry="48" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="3"/>
+          <circle cx="214" cy="158" r="16" fill="#1d4ed8"/>
+          <circle cx="242" cy="182" r="8" fill="#1d4ed8"/>
         </g>
 
         <g class="lab-organelle" data-organelle="mitochondria" tabindex="0" role="button" aria-label="Mitocôndria">
           <path d="M330 118c15 0 27 12 27 27s-12 27-27 27-27-12-27-27 12-27 27-27z"
-            fill="#f0fdf4" stroke="#166534" stroke-width="3"/>
+            fill="#eff6ff" stroke="#1d4ed8" stroke-width="3"/>
           <path d="M314 135c9 6 9 34 0 40M325 128c10 8 10 46 0 54M336 128c10 8 10 46 0 54"
-            fill="none" stroke="#22c55e" stroke-width="2.5"/>
+            fill="none" stroke="#facc15" stroke-width="2.5"/>
         </g>
 
         <g class="lab-organelle" data-organelle="ribossomo" tabindex="0" role="button" aria-label="Ribossomos">
-          <g fill="#22c55e">
+          <g fill="#facc15">
             <ellipse cx="150" cy="115" rx="19" ry="9"/>
             <ellipse cx="168" cy="212" rx="20" ry="9" transform="rotate(18 168 212)"/>
             <ellipse cx="352" cy="238" rx="19" ry="9" transform="rotate(-24 352 238)"/>
@@ -251,28 +251,28 @@ function cellStage() {
 
         <g class="lab-organelle" data-organelle="complexo-golgi" tabindex="0" role="button" aria-label="Complexo de Golgi">
           <path d="M330 262c14-14 28-14 42 0M334 276c14-14 28-14 42 0M340 290c12-12 24-12 36 0"
-            fill="none" stroke="#166534" stroke-width="6" stroke-linecap="round"/>
+            fill="none" stroke="#1d4ed8" stroke-width="6" stroke-linecap="round"/>
         </g>
 
         <g class="lab-organelle" data-organelle="lisossomo" tabindex="0" role="button" aria-label="Lisossomos">
-          <circle cx="128" cy="228" r="14" fill="#86efac" stroke="#166534" stroke-width="2.5"/>
-          <circle cx="378" cy="152" r="12" fill="#86efac" stroke="#166534" stroke-width="2.5"/>
+          <circle cx="128" cy="228" r="14" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2.5"/>
+          <circle cx="378" cy="152" r="12" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2.5"/>
         </g>
 
         <g class="lab-organelle" data-organelle="reticulo" tabindex="0" role="button" aria-label="Retículo endoplasmático">
           <path d="M108 82c26-18 52-18 78 0M104 104c26-18 52-18 78 0"
-            fill="none" stroke="#166534" stroke-width="3" stroke-dasharray="8 6"/>
+            fill="none" stroke="#1d4ed8" stroke-width="3" stroke-dasharray="8 6"/>
         </g>
 
         <g class="lab-organelle" data-organelle="membrana" tabindex="0" role="button" aria-label="Membrana plasmática">
-          <ellipse cx="260" cy="190" rx="200" ry="150" fill="none" stroke="#22c55e" stroke-width="8"
+          <ellipse cx="260" cy="190" rx="200" ry="150" fill="none" stroke="#facc15" stroke-width="8"
             stroke-dasharray="16 10" opacity=".75"/>
         </g>
 
         <g class="lab-organelle" data-organelle="citoplasma" tabindex="0" role="button" aria-label="Citoplasma">
-          <circle cx="392" cy="212" r="7" fill="#22c55e"/>
-          <circle cx="186" cy="272" r="6" fill="#22c55e"/>
-          <circle cx="300" cy="316" r="7" fill="#4ade80"/>
+          <circle cx="392" cy="212" r="7" fill="#facc15"/>
+          <circle cx="186" cy="272" r="6" fill="#facc15"/>
+          <circle cx="300" cy="316" r="7" fill="#fde047"/>
         </g>
       </svg>
       <p class="text-xs text-muted text-center mt-2 mb-0">

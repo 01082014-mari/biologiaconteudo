@@ -16,7 +16,7 @@ const ART = {
   citologia: `
     <ellipse cx="160" cy="92" rx="104" ry="70" fill="#ffffff" fill-opacity=".28" stroke="#ffffff" stroke-width="2.5"/>
     <ellipse cx="140" cy="80" rx="30" ry="26" fill="#ffffff" fill-opacity=".5"/>
-    <circle cx="132" cy="74" r="8" fill="#166534" fill-opacity=".6"/>
+    <circle cx="132" cy="74" r="8" fill="#1D4ED8" fill-opacity=".6"/>
     <path d="M186 58c9 0 16 7 16 16s-7 16-16 16-16-7-16-16 7-16 16-16z" fill="#ffffff" fill-opacity=".45"/>
     <g fill="#ffffff" fill-opacity=".55">
       <ellipse cx="100" cy="118" rx="11" ry="5"/>
@@ -86,12 +86,12 @@ const ART = {
 
 /** Cores de cada trilha. */
 const COLORS = {
-  citologia: ['#166534', '#22C55E'],
+  citologia: ['#1D4ED8', '#38BDF8'],
   genetica: ['#5B21B6', '#A855F7'],
-  ecologia: ['#3F6212', '#84CC16'],
+  ecologia: ['#CA8A04', '#FACC15'],
   'corpo-humano': ['#9F1239', '#FB7185'],
   evolucao: ['#B45309', '#F59E0B'],
-  botanica: ['#15803D', '#4ADE80'],
+  botanica: ['#0E7490', '#22D3EE'],
   zoologia: ['#0369A1', '#38BDF8'],
   microbiologia: ['#86198F', '#E879F9'],
   bioquimica: ['#115E59', '#2DD4BF'],

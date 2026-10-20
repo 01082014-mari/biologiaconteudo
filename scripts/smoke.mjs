@@ -18,9 +18,19 @@ const ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)))
 const MODULES = join(ROOT, 'node_modules')
 const SOURCE = join(ROOT, 'biolab', 'node_modules')
 
-if (!existsSync(join(SOURCE, 'jsdom'))) {
+/** Verifica se o jsdom já está disponível no projeto. */
+async function hasJsdom() {
+  try {
+    await import('jsdom')
+    return true
+  } catch {
+    return false
+  }
+}
+
+if (!(await hasJsdom()) && !existsSync(join(SOURCE, 'jsdom'))) {
   console.error(
-    'jsdom não encontrado. Rode `npm install --prefix biolab` ou execute o smoke test em outro ambiente.',
+    'jsdom não encontrado. Rode `npm install` ou `npm install --prefix biolab` antes do smoke test.',
   )
   process.exit(1)
 }

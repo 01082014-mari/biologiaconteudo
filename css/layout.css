@@ -40,10 +40,10 @@
   height: 2.75rem;
   flex: none;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, var(--green-800), var(--green-500));
+  background: linear-gradient(135deg, var(--blue-700), var(--blue-500));
   display: grid;
   place-items: center;
-  box-shadow: var(--shadow-green);
+  box-shadow: var(--shadow-brand);
 }
 .brand__name {
   font-family: var(--font-display);
@@ -104,7 +104,7 @@
 .nav__badge {
   margin-left: auto;
   background: var(--accent);
-  color: #fff;
+  color: var(--accent-contrast);
   font-size: 0.7rem;
   font-weight: 800;
   padding: 0.05rem 0.45rem;
@@ -119,11 +119,11 @@
 
 /* Cartão de nível no rodapé da sidebar */
 .level-card {
-  background: linear-gradient(135deg, var(--green-800), var(--green-600));
+  background: linear-gradient(135deg, var(--blue-800), var(--blue-600));
   color: #fff;
   border-radius: var(--radius);
   padding: 0.85rem 0.95rem;
-  box-shadow: var(--shadow-green);
+  box-shadow: var(--shadow-brand);
 }
 .level-card__row {
   display: flex;
@@ -158,6 +158,19 @@
   background: color-mix(in srgb, var(--background) 88%, transparent);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
+  box-shadow: inset 0 -3px 0 var(--accent);
+}
+
+/* Brasão da escola exibido no cabeçalho */
+.topbar__logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: none;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 0.15rem;
 }
 
 .topbar__title {
@@ -187,6 +200,46 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ------------------------------ Rodapé ------------------------------ */
+
+.site-footer {
+  border-top: 3px solid var(--accent);
+  background: linear-gradient(135deg, var(--blue-800), var(--blue-600));
+  color: #fff;
+  padding: 1.5rem;
+}
+
+.site-footer__inner {
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+}
+
+.site-footer__brand {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.site-footer__author {
+  margin: 0;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.site-footer__note {
+  margin: 0;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.78);
 }
 
 /* ------------------------- Navegação móvel ------------------------- */
@@ -316,6 +369,9 @@
   }
   .topbar {
     padding: 0 1rem;
+  }
+  .site-footer {
+    padding: 1.25rem 1rem calc(5rem + env(safe-area-inset-bottom));
   }
 }
 

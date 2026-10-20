@@ -157,16 +157,16 @@ export function logo(size = 40) {
 <svg class="logo" width="${size}" height="${size}" viewBox="0 0 64 64" role="img" aria-label="BioLab">
   <defs>
     <linearGradient id="biolabLogo" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#86EFAC"/>
-      <stop offset="55%" stop-color="#22C55E"/>
-      <stop offset="100%" stop-color="#166534"/>
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="55%" stop-color="#1D4ED8"/>
+      <stop offset="100%" stop-color="#172554"/>
     </linearGradient>
   </defs>
   <rect x="1.5" y="1.5" width="61" height="61" rx="16" fill="url(#biolabLogo)"/>
   <path d="M32 12c11 0 19 7.6 19 18.5 0 11.6-9 21.5-19 21.5S13 42.1 13 30.5C13 19.6 21 12 32 12z"
         fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.6"/>
-  <circle cx="32" cy="31" r="11.5" fill="#FFFFFF" fill-opacity="0.14" stroke="#FFFFFF" stroke-width="2.4"/>
-  <circle cx="32" cy="31" r="4.4" fill="#FFFFFF"/>
+  <circle cx="32" cy="31" r="11.5" fill="#FFFFFF" fill-opacity="0.14" stroke="#FACC15" stroke-width="2.4"/>
+  <circle cx="32" cy="31" r="4.4" fill="#FACC15"/>
   <path d="M25 18.5c3.2 3 3.2 8 0 11M39 18.5c-3.2 3-3.2 8 0 11M25 43.5c3.2-3 3.2-8 0-11M39 43.5c-3.2-3-3.2-8 0-11"
         fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
   <path d="M32 12c0 7-3 11-3 19s3 12 3 21" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>

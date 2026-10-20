@@ -42,7 +42,7 @@ function applyTheme(theme) {
   const effective = theme === 'auto' ? (media.matches ? 'escuro' : 'claro') : theme
   document.documentElement.dataset.theme = effective
   const meta = document.querySelector('meta[name="theme-color"]:not([media])')
-  if (meta) meta.setAttribute('content', effective === 'escuro' ? '#0b1220' : '#166534')
+  if (meta) meta.setAttribute('content', effective === 'escuro' ? '#0b1220' : '#1d4ed8')
 }
 
 /* ------------------------------------------------------------------ */

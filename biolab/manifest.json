@@ -8,8 +8,8 @@
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#F0FDF4",
-  "theme_color": "#166534",
+  "background_color": "#EFF6FF",
+  "theme_color": "#1d4ed8",
   "categories": ["education", "science"],
   "icons": [
     {

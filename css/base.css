@@ -3,34 +3,43 @@
    ================================================================= */
 
 :root {
-  /* Identidade BioLab */
-  --green-900: #14532d;
-  --green-800: #166534;
-  --green-700: #166534;
-  --green-600: #16a34a;
-  --green-500: #22c55e;
-  --green-400: #4ade80;
-  --green-300: #86efac;
-  --green-100: #dcfce7;
-  --green-50: #f0fdf4;
+  /* Identidade BioLab — azul (cor principal) e amarelo (cor de destaque) */
+  --blue-900: #172554;
+  --blue-800: #1e3a8a;
+  --blue-700: #1d4ed8;
+  --blue-600: #2563eb;
+  --blue-500: #3b82f6;
+  --blue-400: #60a5fa;
+  --blue-300: #93c5fd;
+  --blue-100: #dbeafe;
+  --blue-50: #eff6ff;
 
-  --background: #f0fdf4;
+  --yellow-700: #a16207;
+  --yellow-600: #ca8a04;
+  --yellow-500: #eab308;
+  --yellow-400: #facc15;
+  --yellow-300: #fde047;
+  --yellow-100: #fef9c3;
+  --yellow-50: #fefce8;
+
+  --background: #eff6ff;
   --surface: #ffffff;
-  --surface-2: #f7fdf9;
-  --surface-3: #ecfdf3;
+  --surface-2: #f7faff;
+  --surface-3: #e9f1fe;
   --foreground: #0f172a;
   --muted: #52637a;
   --muted-2: #7c8ba1;
-  --border: #dbeee1;
-  --border-strong: #b9ddc6;
+  --border: #d9e5fb;
+  --border-strong: #b6cdf5;
 
-  --primary: #166534;
-  --primary-hover: #14532d;
-  --primary-soft: #dcfce7;
+  --primary: #1d4ed8;
+  --primary-hover: #1e40af;
+  --primary-soft: #dbeafe;
   --primary-contrast: #ffffff;
 
-  --accent: #22c55e;
-  --accent-soft: #bbf7d0;
+  --accent: #facc15;
+  --accent-soft: #fef9c3;
+  --accent-contrast: #422006;
 
   --success: #15803d;
   --success-soft: #dcfce7;
@@ -44,7 +53,7 @@
   --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
   --shadow: 0 4px 16px rgba(15, 23, 42, 0.07);
   --shadow-lg: 0 18px 40px rgba(15, 23, 42, 0.12);
-  --shadow-green: 0 10px 30px rgba(22, 101, 52, 0.22);
+  --shadow-brand: 0 10px 30px rgba(29, 78, 216, 0.22);
 
   --radius-sm: 0.5rem;
   --radius: 0.85rem;
@@ -66,19 +75,20 @@
   --surface: #121c2e;
   --surface-2: #16233a;
   --surface-3: #1b2b45;
-  --foreground: #e8f5ec;
+  --foreground: #e9eefb;
   --muted: #a3b3c7;
   --muted-2: #8394aa;
   --border: #22334c;
   --border-strong: #2f4a68;
 
-  --primary: #34d399;
-  --primary-hover: #6ee7b7;
-  --primary-soft: #113b2a;
-  --primary-contrast: #06251a;
+  --primary: #60a5fa;
+  --primary-hover: #93c5fd;
+  --primary-soft: #1c3055;
+  --primary-contrast: #0b1220;
 
-  --accent: #22c55e;
-  --accent-soft: #143d2b;
+  --accent: #facc15;
+  --accent-soft: #3b3208;
+  --accent-contrast: #1c1400;
 
   --success: #4ade80;
   --success-soft: #10331f;
@@ -92,7 +102,7 @@
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
   --shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
   --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.55);
-  --shadow-green: 0 10px 30px rgba(34, 197, 94, 0.18);
+  --shadow-brand: 0 10px 30px rgba(59, 130, 246, 0.28);
 }
 
 *,
@@ -186,12 +196,12 @@ textarea {
 
 ::selection {
   background: var(--accent-soft);
-  color: var(--green-900);
+  color: var(--blue-900);
 }
 
 [data-theme='dark'] ::selection {
-  background: #1c5c3a;
-  color: #eafff1;
+  background: var(--accent-soft);
+  color: var(--accent);
 }
 
 /* Acessibilidade: respeita a preferência de movimento reduzido */

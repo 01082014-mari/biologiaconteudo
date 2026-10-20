@@ -281,32 +281,32 @@ export function cellDiagram(withWall = false) {
 <svg viewBox="0 0 520 360" width="100%" role="img" aria-label="Esquema de uma célula eucariótica">
   <defs>
     <radialGradient id="cytoplasm" cx="50%" cy="45%" r="60%">
-      <stop offset="0%" stop-color="#f0fdf4"/>
-      <stop offset="100%" stop-color="#bbf7d0"/>
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
     </radialGradient>
   </defs>
-  ${withWall ? '<rect x="40" y="30" width="440" height="300" rx="34" fill="#dcfce7" stroke="#16a34a" stroke-width="4"/>' : ''}
-  <ellipse cx="260" cy="180" rx="190" ry="140" fill="url(#cytoplasm)" stroke="#166534" stroke-width="4"/>
-  <ellipse cx="235" cy="160" rx="52" ry="44" fill="#a7f3d0" stroke="#166534" stroke-width="3"/>
-  <circle cx="222" cy="150" r="15" fill="#166534"/>
-  <path d="M310 120c14 0 26 12 26 26s-12 26-26 26-26-12-26-26 12-26 26-26z" fill="#f0fdf4" stroke="#166534" stroke-width="3"/>
-  <path d="M296 136c8 6 8 34 0 40M306 128c10 8 10 48 0 56M316 128c10 8 10 48 0 56" fill="none" stroke="#22c55e" stroke-width="2.5"/>
-  <g fill="#22c55e" opacity=".85">
+  ${withWall ? '<rect x="40" y="30" width="440" height="300" rx="34" fill="#fef9c3" stroke="#2563eb" stroke-width="4"/>' : ''}
+  <ellipse cx="260" cy="180" rx="190" ry="140" fill="url(#cytoplasm)" stroke="#1d4ed8" stroke-width="4"/>
+  <ellipse cx="235" cy="160" rx="52" ry="44" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="3"/>
+  <circle cx="222" cy="150" r="15" fill="#1d4ed8"/>
+  <path d="M310 120c14 0 26 12 26 26s-12 26-26 26-26-12-26-26 12-26 26-26z" fill="#eff6ff" stroke="#1d4ed8" stroke-width="3"/>
+  <path d="M296 136c8 6 8 34 0 40M306 128c10 8 10 48 0 56M316 128c10 8 10 48 0 56" fill="none" stroke="#facc15" stroke-width="2.5"/>
+  <g fill="#facc15" opacity=".85">
     <ellipse cx="160" cy="120" rx="18" ry="9"/>
     <ellipse cx="175" cy="200" rx="20" ry="9" transform="rotate(18 175 200)"/>
     <ellipse cx="340" cy="225" rx="18" ry="9" transform="rotate(-24 340 225)"/>
   </g>
-  <g fill="#86efac" stroke="#166534" stroke-width="2">
+  <g fill="#93c5fd" stroke="#1d4ed8" stroke-width="2">
     <circle cx="150" cy="215" r="13"/>
     <circle cx="360" cy="150" r="11"/>
   </g>
-  <g fill="#22c55e">
+  <g fill="#facc15">
     <circle cx="330" cy="255" r="7"/>
     <circle cx="195" cy="255" r="6"/>
     <circle cx="380" cy="200" r="6"/>
   </g>
-  <path d="M120 90c20-14 40-14 60 0" fill="none" stroke="#166534" stroke-width="2.5" stroke-dasharray="6 5"/>
-  <path d="M150 250c22 16 50 18 74 6" fill="none" stroke="#166534" stroke-width="2.5" stroke-dasharray="6 5"/>
+  <path d="M120 90c20-14 40-14 60 0" fill="none" stroke="#1d4ed8" stroke-width="2.5" stroke-dasharray="6 5"/>
+  <path d="M150 250c22 16 50 18 74 6" fill="none" stroke="#1d4ed8" stroke-width="2.5" stroke-dasharray="6 5"/>
 </svg>`
 }
 
@@ -325,9 +325,9 @@ function mitosisDiagram() {
       const x = index * 130 + 10
       return `
   <g transform="translate(${x},10)">
-    <ellipse cx="55" cy="70" rx="50" ry="45" fill="#f0fdf4" stroke="#166534" stroke-width="3"/>
+    <ellipse cx="55" cy="70" rx="50" ry="45" fill="#eff6ff" stroke="#1d4ed8" stroke-width="3"/>
     ${phase.cells
-      .map((mark, i) => `<text x="${i === 0 ? 42 : 68}" y="80" font-size="26" fill="#166534" text-anchor="middle">${mark}</text>`)
+      .map((mark, i) => `<text x="${i === 0 ? 42 : 68}" y="80" font-size="26" fill="#1d4ed8" text-anchor="middle">${mark}</text>`)
       .join('')}
     <text x="55" y="140" font-size="12" text-anchor="middle" fill="currentColor">${phase.label}</text>
   </g>`
@@ -344,9 +344,9 @@ function dnaDiagram() {
   ${rungs
     .map((y, index) => {
       const offset = Math.sin(index * 0.9) * 30
-      return `<line x1="${120 - offset - 26}" y1="${y}" x2="${120 + offset + 26}" y2="${y}" stroke="#86efac" stroke-width="3"/>
-      <circle cx="${120 - offset - 26}" cy="${y}" r="5" fill="#166534"/>
-      <circle cx="${120 + offset + 26}" cy="${y}" r="5" fill="#22c55e"/>`
+      return `<line x1="${120 - offset - 26}" y1="${y}" x2="${120 + offset + 26}" y2="${y}" stroke="#93c5fd" stroke-width="3"/>
+      <circle cx="${120 - offset - 26}" cy="${y}" r="5" fill="#1d4ed8"/>
+      <circle cx="${120 + offset + 26}" cy="${y}" r="5" fill="#facc15"/>`
     })
     .join('')}
   <path d="${rungs
@@ -354,13 +354,13 @@ function dnaDiagram() {
       const offset = Math.sin(index * 0.9) * 30
       return `${index === 0 ? 'M' : 'L'} ${120 - offset - 26} ${y}`
     })
-    .join(' ')}" fill="none" stroke="#166534" stroke-width="4" stroke-linecap="round"/>
+    .join(' ')}" fill="none" stroke="#1d4ed8" stroke-width="4" stroke-linecap="round"/>
   <path d="${rungs
     .map((y, index) => {
       const offset = Math.sin(index * 0.9) * 30
       return `${index === 0 ? 'M' : 'L'} ${120 + offset + 26} ${y}`
     })
-    .join(' ')}" fill="none" stroke="#22c55e" stroke-width="4" stroke-linecap="round"/>
+    .join(' ')}" fill="none" stroke="#facc15" stroke-width="4" stroke-linecap="round"/>
 </svg>`
 }
 
@@ -368,32 +368,32 @@ function dnaDiagram() {
 function punnettDiagram() {
   return `
 <svg viewBox="0 0 320 180" width="100%" role="img" aria-label="Quadro de Punnett de um cruzamento Aa por Aa">
-  <rect x="20" y="20" width="130" height="130" rx="8" fill="#f0fdf4" stroke="#166534" stroke-width="2"/>
-  <line x1="85" y1="20" x2="85" y2="150" stroke="#166534" stroke-width="1.5"/>
-  <line x1="20" y1="85" x2="150" y2="85" stroke="#166534" stroke-width="1.5"/>
-  <text x="52" y="62" font-size="20" text-anchor="middle" fill="#166534" font-weight="700">AA</text>
-  <text x="118" y="62" font-size="20" text-anchor="middle" fill="#166534" font-weight="700">Aa</text>
-  <text x="52" y="120" font-size="20" text-anchor="middle" fill="#166534" font-weight="700">Aa</text>
-  <text x="118" y="120" font-size="20" text-anchor="middle" fill="#166534" font-weight="700">aa</text>
+  <rect x="20" y="20" width="130" height="130" rx="8" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2"/>
+  <line x1="85" y1="20" x2="85" y2="150" stroke="#1d4ed8" stroke-width="1.5"/>
+  <line x1="20" y1="85" x2="150" y2="85" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="52" y="62" font-size="20" text-anchor="middle" fill="#1d4ed8" font-weight="700">AA</text>
+  <text x="118" y="62" font-size="20" text-anchor="middle" fill="#1d4ed8" font-weight="700">Aa</text>
+  <text x="52" y="120" font-size="20" text-anchor="middle" fill="#1d4ed8" font-weight="700">Aa</text>
+  <text x="118" y="120" font-size="20" text-anchor="middle" fill="#1d4ed8" font-weight="700">aa</text>
   <text x="52" y="36" font-size="12" text-anchor="middle" fill="currentColor">A</text>
   <text x="118" y="36" font-size="12" text-anchor="middle" fill="currentColor">A</text>
   <text x="10" y="62" font-size="12" text-anchor="middle" fill="currentColor">A</text>
   <text x="10" y="120" font-size="12" text-anchor="middle" fill="currentColor">a</text>
   <text x="85" y="170" font-size="12" text-anchor="middle" fill="currentColor">1 AA · 2 Aa · 1 aa</text>
   <text x="230" y="70" font-size="13" text-anchor="middle" fill="currentColor">Proporção genotípica</text>
-  <text x="230" y="92" font-size="15" text-anchor="middle" fill="#166534" font-weight="700">1 : 2 : 1</text>
+  <text x="230" y="92" font-size="15" text-anchor="middle" fill="#1d4ed8" font-weight="700">1 : 2 : 1</text>
   <text x="230" y="120" font-size="13" text-anchor="middle" fill="currentColor">Fenótipo dominante</text>
-  <text x="230" y="142" font-size="15" text-anchor="middle" fill="#166534" font-weight="700">75%</text>
+  <text x="230" y="142" font-size="15" text-anchor="middle" fill="#1d4ed8" font-weight="700">75%</text>
 </svg>`
 }
 
 /** Fluxo da respiração celular. */
 function respirationDiagram() {
   const steps = [
-    { title: 'Glicólise', detail: 'Citoplasma', color: '#86efac' },
-    { title: 'Ciclo de Krebs', detail: 'Matriz mitocondrial', color: '#4ade80' },
-    { title: 'Cadeia respiratória', detail: 'Membrana interna', color: '#22c55e' },
-    { title: 'ATP', detail: '~30 a 32 por glicose', color: '#166534' },
+    { title: 'Glicólise', detail: 'Citoplasma', color: '#93c5fd' },
+    { title: 'Ciclo de Krebs', detail: 'Matriz mitocondrial', color: '#fde047' },
+    { title: 'Cadeia respiratória', detail: 'Membrana interna', color: '#facc15' },
+    { title: 'ATP', detail: '~30 a 32 por glicose', color: '#1d4ed8' },
   ]
   return `
 <svg viewBox="0 0 520 130" width="100%" role="img" aria-label="Etapas da respiração celular">
@@ -406,7 +406,7 @@ function respirationDiagram() {
     <rect width="110" height="70" rx="12" fill="${step.color}"/>
     <text x="55" y="32" font-size="13" text-anchor="middle" fill="${textColor}" font-weight="700">${step.title}</text>
     <text x="55" y="52" font-size="10.5" text-anchor="middle" fill="${textColor}">${step.detail}</text>
-    ${index < steps.length - 1 ? `<path d="M112 35h14m0 0-5-5m5 5-5 5" stroke="#166534" stroke-width="2" fill="none" stroke-linecap="round"/>` : ''}
+    ${index < steps.length - 1 ? `<path d="M112 35h14m0 0-5-5m5 5-5 5" stroke="#1d4ed8" stroke-width="2" fill="none" stroke-linecap="round"/>` : ''}
   </g>`
     })
     .join('')}
@@ -424,7 +424,7 @@ function ecosystemDiagram() {
       const x = (520 - width) / 2
       const y = index * 30 + 8
       const opacity = 0.95 - index * 0.11
-      return `<rect x="${x}" y="${y}" width="${width}" height="24" rx="8" fill="#22c55e" fill-opacity="${opacity}"/>
+      return `<rect x="${x}" y="${y}" width="${width}" height="24" rx="8" fill="#facc15" fill-opacity="${opacity}"/>
       <text x="260" y="${y + 16}" font-size="11.5" text-anchor="middle" fill="#0f172a" font-weight="600">${level}</text>`
     })
     .join('')}
@@ -434,10 +434,10 @@ function ecosystemDiagram() {
 /** Cadeia alimentar. */
 function foodChainDiagram() {
   const nodes = [
-    { x: 60, label: 'Produtor', fill: '#86efac' },
-    { x: 200, label: 'Consumidor primário', fill: '#4ade80' },
-    { x: 340, label: 'Consumidor secundário', fill: '#22c55e' },
-    { x: 460, label: 'Decompositor', fill: '#166534', text: '#ffffff' },
+    { x: 60, label: 'Produtor', fill: '#93c5fd' },
+    { x: 200, label: 'Consumidor primário', fill: '#fde047' },
+    { x: 340, label: 'Consumidor secundário', fill: '#facc15' },
+    { x: 460, label: 'Decompositor', fill: '#1d4ed8', text: '#ffffff' },
   ]
   return `
 <svg viewBox="0 0 520 110" width="100%" role="img" aria-label="Cadeia alimentar">
@@ -450,8 +450,8 @@ function foodChainDiagram() {
   </g>
   ${
     index < nodes.length - 1
-      ? `<path d="M${node.x + 57} 56h${nodes[index + 1].x - node.x - 60}" stroke="#166534" stroke-width="2.5" marker-end="url(#arrow)"/>
-         <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0l8 4-8 4z" fill="#166534"/></marker></defs>`
+      ? `<path d="M${node.x + 57} 56h${nodes[index + 1].x - node.x - 60}" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#arrow)"/>
+         <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0l8 4-8 4z" fill="#1d4ed8"/></marker></defs>`
       : ''
   }`,
     )
@@ -463,15 +463,15 @@ function foodChainDiagram() {
 function circulationDiagram() {
   return `
 <svg viewBox="0 0 420 200" width="100%" role="img" aria-label="Circulação pulmonar e sistêmica">
-  <rect x="20" y="20" width="380" height="70" rx="16" fill="#f0fdf4" stroke="#166534" stroke-width="2.5"/>
-  <text x="210" y="48" font-size="13" text-anchor="middle" fill="#166534" font-weight="700">CIRCULAÇÃO SISTÊMICA</text>
+  <rect x="20" y="20" width="380" height="70" rx="16" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2.5"/>
+  <text x="210" y="48" font-size="13" text-anchor="middle" fill="#1d4ed8" font-weight="700">CIRCULAÇÃO SISTÊMICA</text>
   <text x="210" y="68" font-size="11" text-anchor="middle" fill="currentColor">Corpo → coração → corpo</text>
 
-  <rect x="20" y="120" width="380" height="60" rx="16" fill="#dcfce7" stroke="#22c55e" stroke-width="2.5"/>
-  <text x="210" y="145" font-size="13" text-anchor="middle" fill="#166534" font-weight="700">CIRCULAÇÃO PULMONAR</text>
+  <rect x="20" y="120" width="380" height="60" rx="16" fill="#fef9c3" stroke="#facc15" stroke-width="2.5"/>
+  <text x="210" y="145" font-size="13" text-anchor="middle" fill="#1d4ed8" font-weight="700">CIRCULAÇÃO PULMONAR</text>
   <text x="210" y="164" font-size="11" text-anchor="middle" fill="currentColor">Coração → pulmões → coração</text>
 
-  <rect x="170" y="86" width="80" height="38" rx="12" fill="#166534"/>
+  <rect x="170" y="86" width="80" height="38" rx="12" fill="#1d4ed8"/>
   <text x="210" y="110" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="700">CORAÇÃO</text>
 </svg>`
 }
@@ -480,14 +480,14 @@ function circulationDiagram() {
 function nephronDiagram() {
   return `
 <svg viewBox="0 0 460 200" width="100%" role="img" aria-label="Estrutura do néfron">
-  <circle cx="70" cy="60" r="22" fill="#f0fdf4" stroke="#166534" stroke-width="3"/>
-  <circle cx="70" cy="60" r="9" fill="#22c55e"/>
-  <path d="M92 60h30a16 16 0 0 1 0 32h-24" fill="none" stroke="#166534" stroke-width="3"/>
-  <path d="M98 92c0 30 30 30 30 60" fill="none" stroke="#166534" stroke-width="3"/>
-  <path d="M128 152c-14 22 14 30 0 48" fill="none" stroke="#22c55e" stroke-width="3"/>
-  <path d="M158 152c14 22-14 30 0 48" fill="none" stroke="#22c55e" stroke-width="3"/>
-  <path d="M158 92c40 0 60 24 60 44" fill="none" stroke="#166534" stroke-width="3"/>
-  <path d="M218 136h60" fill="none" stroke="#166534" stroke-width="3"/>
+  <circle cx="70" cy="60" r="22" fill="#eff6ff" stroke="#1d4ed8" stroke-width="3"/>
+  <circle cx="70" cy="60" r="9" fill="#facc15"/>
+  <path d="M92 60h30a16 16 0 0 1 0 32h-24" fill="none" stroke="#1d4ed8" stroke-width="3"/>
+  <path d="M98 92c0 30 30 30 30 60" fill="none" stroke="#1d4ed8" stroke-width="3"/>
+  <path d="M128 152c-14 22 14 30 0 48" fill="none" stroke="#facc15" stroke-width="3"/>
+  <path d="M158 152c14 22-14 30 0 48" fill="none" stroke="#facc15" stroke-width="3"/>
+  <path d="M158 92c40 0 60 24 60 44" fill="none" stroke="#1d4ed8" stroke-width="3"/>
+  <path d="M218 136h60" fill="none" stroke="#1d4ed8" stroke-width="3"/>
   <text x="70" y="100" font-size="10" text-anchor="middle" fill="currentColor">Glomerulo</text>
   <text x="128" y="215" font-size="10" text-anchor="middle" fill="currentColor">Alça de Henle</text>
   <text x="300" y="130" font-size="10" text-anchor="middle" fill="currentColor">Túbulo coletor</text>
@@ -503,11 +503,11 @@ function photosynthesisDiagram() {
   <g stroke="#f59e0b" stroke-width="2.5">
     <line x1="92" y1="42" x2="130" y2="30"/><line x1="92" y1="52" x2="130" y2="48"/><line x1="92" y1="58" x2="130" y2="66"/>
   </g>
-  <rect x="140" y="24" width="170" height="60" rx="12" fill="#166534"/>
+  <rect x="140" y="24" width="170" height="60" rx="12" fill="#1d4ed8"/>
   <text x="225" y="50" font-size="13" text-anchor="middle" fill="#ffffff" font-weight="700">CLOROPLASTO</text>
-  <text x="225" y="70" font-size="10.5" text-anchor="middle" fill="#bbf7d0">Clorofila + luz solar</text>
-  <path d="M320 54h50" stroke="#166534" stroke-width="2.5"/>
-  <path d="M362 48l10 6-10 6" fill="none" stroke="#166534" stroke-width="2.5"/>
+  <text x="225" y="70" font-size="10.5" text-anchor="middle" fill="#dbeafe">Clorofila + luz solar</text>
+  <path d="M320 54h50" stroke="#1d4ed8" stroke-width="2.5"/>
+  <path d="M362 48l10 6-10 6" fill="none" stroke="#1d4ed8" stroke-width="2.5"/>
   <text x="400" y="50" font-size="11" text-anchor="middle" fill="currentColor">O₂</text>
 
   <text x="150" y="120" font-size="11" fill="currentColor">Reação: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂</text>
@@ -534,7 +534,7 @@ function classificationDiagram() {
     .map(([rank, name], index) => {
       const y = index * 22 + 6
       const indent = index * 12
-      return `<rect x="${indent}" y="${y}" width="${150 - indent * 0.6}" height="19" rx="5" fill="#22c55e" fill-opacity="${0.9 - index * 0.08}"/>
+      return `<rect x="${indent}" y="${y}" width="${150 - indent * 0.6}" height="19" rx="5" fill="#facc15" fill-opacity="${0.9 - index * 0.08}"/>
       <text x="${indent + 7}" y="${y + 14}" font-size="10" fill="#0f172a" font-weight="600">${rank}: ${name}</text>`
     })
     .join('')}
