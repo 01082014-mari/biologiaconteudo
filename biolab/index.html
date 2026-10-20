@@ -24,6 +24,10 @@
       O BioLab precisa de JavaScript habilitado para funcionar. Ative o JavaScript e recarregue a
       página.
     </noscript>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx">
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+      }
+    </script>
   </body>
 </html>
